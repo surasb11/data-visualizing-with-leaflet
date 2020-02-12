@@ -79,7 +79,7 @@ function createMap(earthquakes) {
 		attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		maxZoom: 18,
 		id: 'mapbox.high-contrast',
-		accessToken: 'pk.eyJ1Ijoib2xhd3JlbmNlNzk5IiwiYSI6ImNqZXZvcTBmdDBuY3oycXFqZThzbjc5djYifQ.-ChNrBxEIvInNJWiHX5pXg'
+		accessToken: API_KEY
 	});
 
 	var satellite = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
@@ -149,8 +149,8 @@ function createMap(earthquakes) {
 		var div = L.DomUtil.create("div", "info legend");
 		
 		var grades = [0, 1, 2, 3, 4, 5];
-		var colors = ['#ff3333', '#ff6633', '#ff9933', 
-					'#ffcc33', '#ffff33', '#ccff33'];
+		var colors = ['#ffff33', '#ccff33','#ff3333', 
+						'#ff6633', '#ff9933', '#ffcc33'];
 	
 		// loop through our density intervals and generate a label with a colored square for each interval
 		for (var i = 0; i < grades.length; i++) {
