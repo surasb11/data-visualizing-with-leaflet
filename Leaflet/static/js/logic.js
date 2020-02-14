@@ -40,7 +40,7 @@ function c_color(magnitude) {
 		return "#ff7626"
 	}
 	else if (magnitude <= 5) {
-		return "#f04d24"
+		return "#f04d24" 
 	}
 	else {
 		return "#d62020"
@@ -149,8 +149,7 @@ function createMap(earthquakes) {
 		var div = L.DomUtil.create("div", "info legend");
 		
 		var grades = [0, 1, 2, 3, 4, 5];
-		var colors = ['#ffff33', '#ccff33','#ff3333', 
-						'#ff6633', '#ff9933', '#ffcc33'];
+		var colors = ["#f5e640", "#f5c440", "#ff9326", "#ff7626", "#f04d24", "#d62020"];
 	
 		// loop through our density intervals and generate a label with a colored square for each interval
 		for (var i = 0; i < grades.length; i++) {
